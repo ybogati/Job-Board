@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Board</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>JobBoard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  <style>
+    .job-container {
+      margin: 20px;
+    }
+
+    .job-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background: #f9f9f9;
+    }
+
+    .application-form {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px; /* Adjusted width */
+        max-height: 80vh; /* Limit the height */
+        background: #fff;
+        padding: 15px; /* Adjusted padding */
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        overflow-y: auto; /* Allow scrolling inside the form */
+      }
+      
+      
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index-2.html">JobBoard</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+	           <!-- Job Menu with Dropdown -->
+             <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="jobDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Job</a>
+              <div class="dropdown-menu" aria-labelledby="jobDropdown">
+                <a class="dropdown-item" href="software.html">Software Engineer</a>
+                <a class="dropdown-item" href="mechanical.html">Mechanical Engineer</a>
+                <a class="dropdown-item" href="data.html">Data Entry</a>
+                <a class="dropdown-item" href="bed.html">Bed Making</a>
+                <a class="dropdown-item" href="food.html">Food Packing</a>
+                <a class="dropdown-item" href="yamato.html">Yamato</a>
+                <a class="dropdown-item" href="interview.html">Interview Materials</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta mr-md-2"><a href="new-post.html" class="nav-link">Post a Job</a></li>
+	          <li class="nav-item cta cta-colored"><a href="job-details.html" class="nav-link">Want a Job</a></li>
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
+          	<p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Software</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Software Engineering Job-Details</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- Job List -->
+  <div class="container mt-4">
+    <div class="row" id="job-container">
+      <!-- Job Card 1 -->
+      <div class="col-md-3 mb-4">
+        <div class="job-card">
+          <h2>Frontend Developer</h2>
+          <p><strong>Company:</strong> Kyoto Software Company</p>
+          <p><strong>Location:</strong> Kyoto, Japan</p>
+          <p><strong>Job Type:</strong> Part Time</p>
+          <p><strong>Salary:</strong> Per Hour 2000</p>
+          <hr>
+          <div class="description">
+            <h3>Job Description</h3>
+            <p>Python Developer</p>
+          </div>
+          <div class="requirements">
+            <h3>Requirements</h3>
+            <p>2 years experience in this field.</p>
+          </div>
+          <button class="btn btn-primary apply-btn" 
+                  data-company="Kyoto Software Company" 
+                  data-location="Kyoto, Japan" 
+                  data-category="IT" 
+                  data-job-type="Part Time" 
+                  data-salary="Per Hour 2000">
+            Apply Job
+          </button>
+        </div>
+      </div>     
+    </div>
+  </div>
+  
+
+  <!-- Overlay and Form -->
+  <div class="overlay" id="overlay"></div>
+  <div id="application-form" class="application-form">
+    <h3>Apply for this Job</h3>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your Full Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="company_name">Company Name</label>
+        <input type="text" id="company_name" readonly>
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" readonly>
+      </div>
+      <div class="form-group">
+        <label for="job_type">Job Type</label>
+        <input type="text" id="job_type" readonly>
+      </div>
+      <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="text" id="salary" readonly>
+      </div>
+      <div class="form-group">
+        <label for="cv">Upload Your CV</label>
+        <input type="file" id="cv" accept=".pdf,.doc,.docx" required>
+      </div>
+      <button type="submit" class="submit-btn">Submit Application</button>
+      <button type="button" class="btn btn-secondary" onclick="closeApplicationForm()">Cancel</button>
+    </form>
+  </div>
+  <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+          <div class="col-md">
+           <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">About</h2>
+            <p>Welcome to Job Board, where job seekers and employers meet Our mission is to simplify the hiring process by providing a user-friendly platform that connects talent with top opportunities.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Employers</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">How it works</a></li>
+              <li><a href="#" class="py-2 d-block">Register</a></li>
+              <li><a href="#" class="py-2 d-block">Post a Job</a></li>
+              <li><a href="#" class="py-2 d-block">Faq</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Workers</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">How it works</a></li>
+              <li><a href="#" class="py-2 d-block">Register</a></li>
+              <li><a href="#" class="py-2 d-block">Job Search</a></li>
+              <li><a href="#" class="py-2 d-block">Emploer Search</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">Higashiyama Ward, Kyoto</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">9086342342</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">jobboard@gmail.com</span></span></a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by Jobboard</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.html"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8e5e4ae128ad96c2","version":"2024.10.5","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}' crossorigin="anonymous"></script>
+  <script>
+    // Show Application Form
+    function showApplicationForm(data) {
+      document.getElementById('company_name').value = data.company;
+      document.getElementById('location').value = data.location;
+      document.getElementById('job_type').value = data.jobType;
+      document.getElementById('salary').value = data.salary;
+
+      document.getElementById('application-form').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+    // Close Application Form
+    function closeApplicationForm() {
+      document.getElementById('application-form').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+
+    // Handle Apply Job Button Click
+    document.querySelectorAll('.apply-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const data = {
+          company: button.dataset.company,
+          location: button.dataset.location,
+          category: button.dataset.category,
+          jobType: button.dataset.jobType,
+          salary: button.dataset.salary
+        };
+        showApplicationForm(data);
+      });
+    });
+  </script>
+</body>
+
+</html>
